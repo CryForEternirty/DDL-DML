@@ -33,14 +33,19 @@ sudo dpkg -i dbeaver-ce_latest_amd64.deb
 sudo apt-get install -f
 Запуск командой dbeaver
 Запускаем mysql в контейнере docker run --name test_db -p3306:3306 -e MYSQL_ROOT_PASSWORD=secret -d mysql:latest
+
 Создаем подключение к базе данных в dbeaver
 ![база](image.png)
+
 Прописываем пароль и жмем готово:
 ![пароль](image-1.png)
+
 1.2\1.3 Создаем базу и пользователя, делаем запрос:
 ![пользователь](image-2.png)
+
 1.4.\1.5 Даем права и запрашиваем список прав: GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'%';
 ![права](image-3.png)
+
 1.6 прописываем в url jdbc:mysql://localhost:3306/?allowPublicKeyRetrieval=true&useSSL=false
 и под паролем и логином sys_temp создаем новое подключение.
 итог - создано новое подключение под пользователем sys_temp
