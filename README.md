@@ -44,6 +44,7 @@ sudo apt-get install -f
 1.6 прописываем в url jdbc:mysql://localhost:3306/?allowPublicKeyRetrieval=true&useSSL=false
 и под паролем и логином sys_temp создаем новое подключение.
 итог - создано новое подключение под пользователем sys_temp
+
 ![user](image-4.png)
 1.7\1.8
 ![diagramm](image-5.png)
